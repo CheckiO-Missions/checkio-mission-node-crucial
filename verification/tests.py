@@ -20,7 +20,14 @@ TESTS = {
                 'C': 10
             }],
             "answer": ['B'],
-            "explanation": "Node B is the most crusual here because it separates network on two subnetworks"
+            "explanation": [
+                "Node B is the most crucial here because it separates network on two subnetworks",
+                ['',  '',   '',   '',   '',
+                 '', 'A',   '',  'C',   '',
+                 '',  '',  'B',   '',   '',
+                 '',  '',   '',   '',   '',
+                 '',  '',   '',   '',   ''],
+            ],
         },
         {
             "input": [[
@@ -30,7 +37,14 @@ TESTS = {
                 'B': 10
             }],
             "answer": ['A'],
-            "explanation": "Node A has more users on it"
+            "explanation": [
+                "Node A has more users on it",
+                ['',  '',   '',  '',   '',
+                 '',  '',   '',  '',   '',
+                 '',  'A', '',  'B',   '',
+                 '',  '',   '',  '',   '',
+                 '',  '',   '',  '',   ''],
+            ],
         },
         {
             "input": [[
@@ -46,7 +60,14 @@ TESTS = {
                 'E': 10
             }],
             "answer": ['A'],
-            "explanation": "A doesn't have users connected but it is in the center of the network"
+            "explanation": [
+                "A doesn't have users connected but it is in the center of the network",
+                ['',  '',   '',   '',   '',
+                 '', 'B',   '',  'C',   '',
+                 '',  '',  'A',   '',   '',
+                 '', 'D',   '',  'E',   '',
+                 '',  '',   '',   '',   ''],
+            ],
         },
         {
             "input": [[
@@ -60,7 +81,14 @@ TESTS = {
                 'D': 20
             }],
             "answer": ['B'],
-            "explanation": "well, it has some math behind it"
+            "explanation": [
+                "well, it has some math behind it",
+                ['',  '',   '',   '',   '',
+                 'A', '',  'C',   '',   '',
+                 '', 'B',   '',  'D',   '',
+                 '',  '',   '',   '',   '',
+                 '',  '',   '',   '',   ''],
+            ],
         }
     ],
     "Extra": [
@@ -75,7 +103,14 @@ TESTS = {
                 'C': 10
             }],
             "answer": ['A', 'C'],
-            "explanation": "All 3 nodes are connected in a circle but A and C have the most amount of users"
+            "explanation": [
+                "All 3 nodes are connected in a circle but A and C have the most amount of users",
+                ['',  '',  '',   '',   '',
+                 '',  '', 'A',   '',   '',
+                 '', 'B',  '',  'C',   '',
+                 '',  '',  '',   '',   '',
+                 '',  '',  '',   '',   ''],
+            ],
         },
         {
             "input": [[
@@ -94,7 +129,14 @@ TESTS = {
                 'F': 20
             }],
             "answer": ['B'],
-            "explanation": "You only choosing between B and E. Some math will help to figure which one is the most crusual"
+            "explanation": [
+                "You only choosing between B and E. Some math will help to figure which one is the most crucial",
+                ['',   '',   '',   '',   '',
+                 'A',  '',  'D',   '',   '',
+                 '',  'B',   '',  'E',   '',
+                 '',   '',  'C',   '',  'F',
+                 '',   '',   '',   '',   ''],
+            ],
         }
     ]
 }
