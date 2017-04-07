@@ -1,0 +1,67 @@
+<p>
+    Find the most crucial node in the network. Node's crucinesses is related to user's average satisfaction. If one user can send email to everybody else than his satisfaction is 100%. If the same user can mailing only with half of the network community than his total satisfaction is 50%. If user is on the crashed node he can't send email to anybody.
+</p>
+
+<p>
+    You see. This is easy. Your mission here is to find out crushing of which node hurts total satisfaction the most.
+</p>
+
+<p>
+    <strong>Input: </strong> Two arguments. Network structure (as list of connections between nodes), users on each node (as dict where keys are node-name and values are amount of users).
+</p>
+
+<p>
+    <strong>Output: </strong> List of the most crusial nodes.
+</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+<pre class="brush: python">
+most_crucial([
+    ['A', 'B'],
+    ['B', 'C']
+],{
+    'A': 10,
+    'B': 10,
+    'C': 10
+}) == ['B']
+
+most_crucial([
+    ['A', 'B']
+],{
+    'A': 20,
+    'B': 10
+}) == ['A']
+
+most_crucial([
+    ['A', 'B'],
+    ['A', 'C'],
+    ['A', 'D'],
+    ['A', 'E']
+],{
+    'A': 0,
+    'B': 10,
+    'C': 10,
+    'D': 10,
+    'E': 10
+}) == ['A']
+
+most_crucial([
+    ['A', 'B'],
+    ['B', 'C'],
+    ['C', 'D']
+],{
+    'A': 10,
+    'B': 20,
+    'C': 10,
+    'D': 20
+}) == ['B']
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    <i>Often you have limited resources and you need to choose where you want to focus first.</i>
+</p>
