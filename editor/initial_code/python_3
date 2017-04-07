@@ -1,4 +1,4 @@
-def most_crucial(net, crushes):
+def most_crucial(net, users):
     return ['B']
 
 if __name__ == '__main__':
