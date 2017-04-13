@@ -1,13 +1,25 @@
-<p>
-    Find the most crucial node in the network. Node's crucinesses is related to user's average satisfaction. If one user can send email to everybody else than his satisfaction is 100%. If the same user can mailing only with half of the network community than his total satisfaction is 50%. If user is on the crashed node he can't send email to anybody.
-</p>
+<div class="for_info_only" style="text-align: center">
+    <img src="{{MEDIA}}example.png" style="max-height: 337px">
+</div>
 
 <p>
-    You see. This is easy. Your mission here is to find out crushing of which node hurts total satisfaction the most.
-</p>
+    Citizens of GridLand are sending emails to each other all the time. They send everything – what they just ate, a funny picture, questions or thoughts that are bothering them right now. All the citizens are happy because they have such a wonderful network that keeps them connected.</p>
+ 
+<p>The main goal of the Mayor is to control the city’s happiness. The city’s happiness is a sum of all citizens happiness. And the happiness of each citizens is directly related to the amount of other citizens one can send emails to.</p>
+ 
+<p>Because the city is growing, citizens decide the Mayor needs an assistant to focus on node protection.</p>
+ 
+<p>Your mission is to figure out what will be the first node to investigate and protect for the new assistant. Remember, you should choose the most important node in the network.</p>
+
+
+<div class="for_info_only" style="text-align: center">
+    <img src="{{MEDIA}}example.png" style="max-height: 711px">
+</div>
+
 
 <p>
     <strong>Input: </strong> Two arguments. Network structure (as list of connections between nodes), users on each node (as dict where keys are node-name and values are amount of users).
+
 </p>
 
 <p>
@@ -61,7 +73,3 @@ most_crucial([
 </pre>
 </div>
 
-<p class="for_info_only">
-    <strong>How it is used: </strong>
-    <i>Often you have limited resources and you need to choose where you want to focus first.</i>
-</p>
