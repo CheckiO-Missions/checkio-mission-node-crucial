@@ -33,6 +33,14 @@ def cover(func, in_data):
 
 '''
 
+js_unwrap_and_sort = '''
+
+function cover(func, in_data){
+    return func.apply(in_data).sort()
+}
+
+'''
+
 from checkio.signals import ON_CONNECT
 from checkio import api
 from checkio.referees.io import CheckiOReferee
@@ -50,6 +58,7 @@ api.add_listener(
         },
         cover_code={
             'python-27': unwrap_and_sort,
-            'python-3': unwrap_and_sort
+            'python-3': unwrap_and_sort,
+            'js-node': js_unwrap_and_sort
         }
     ).on_ready)

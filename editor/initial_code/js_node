@@ -1,13 +1,37 @@
 "use strict";
 
-function sumTwo(a, b) {
-    return 0;
+
+function mostCrucial(a, b) {
+    // your code here
+    return undefined;
 }
 
 var assert = require('assert');
 
 if (!global.is_checking) {
-    assert.equal(sumTwo(3, 2), 5, "First")
-    assert.equal(sumTwo(5, 7), 12, "Second")
-    console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
+
+	console.log('Example:');
+	console.log(mostCrucial([['A', 'B'], ['B', 'C']],
+	 {'A': 10, 'B': 10, 'C': 10}));
+
+	// These "asserts" are used for self-checking
+	assert.deepEqual(mostCrucial([['A', 'B'], ['B', 'C']],
+	 {'A': 10, 'B': 10, 'C': 10}), ['B']);
+	assert.deepEqual(mostCrucial([['A', 'B']], {'A': 20, 'B': 10}), ['A']);
+	assert.deepEqual(mostCrucial([['A', 'B'],
+	  ['A', 'C'],
+	  ['A', 'D'],
+	  ['A', 'E']],
+	 {'A': 0,
+	  'B': 10,
+	  'C': 10,
+	  'D': 10,
+	  'E': 10}), ['A']);
+	assert.deepEqual(mostCrucial([['A', 'B'], ['B', 'C'], ['C', 'D']],
+	 {'A': 100, 'B': 1, 'C': 97, 'D': 1}), ['A']);
+	assert.deepEqual(mostCrucial([['A', 'B'], ['B', 'C'], ['C', 'D']],
+	 {'A': 10, 'B': 20, 'C': 10, 'D': 20}), ['B']);
+
+	console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }
+    
