@@ -29,6 +29,50 @@
     <p>
         <strong>Пример:</strong>
     </p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: python">
+mostCrucial([
+    ['A', 'B'],
+    ['B', 'C']
+],{
+    'A': 10,
+    'B': 10,
+    'C': 10
+}) == ['B']
+
+mostCrucial([
+    ['A', 'B']
+],{
+    'A': 20,
+    'B': 10
+}) == ['A']
+
+mostCrucial([
+    ['A', 'B'],
+    ['A', 'C'],
+    ['A', 'D'],
+    ['A', 'E']
+],{
+    'A': 0,
+    'B': 10,
+    'C': 10,
+    'D': 10,
+    'E': 10
+}) == ['A']
+
+mostCrucial([
+    ['A', 'B'],
+    ['B', 'C'],
+    ['C', 'D']
+],{
+    'A': 10,
+    'B': 20,
+    'C': 10,
+    'D': 20
+}) == ['B']
+
+</pre>
+{% else %}
 <pre class="brush: python">
 most_crucial([
     ['A', 'B'],
@@ -70,4 +114,5 @@ most_crucial([
     'D': 20
 }) == ['B']
 </pre>
+{% endif %}
 </div>
