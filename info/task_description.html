@@ -2,14 +2,23 @@
     <img src="{{MEDIA}}title.png" style="max-height: 337px">
 </div>
 
-<p>
-    Citizens of GridLand are sending emails to each other all the time. They send everything - what they just ate, a funny picture, questions or thoughts that are bothering them right now. All the citizens are happy because they have such a wonderful network that keeps them connected.</p>
+<p style="text-align: justify;">Citizens of GridLand are sending emails to each other all the time. They send everything - what they just ate, a funny picture, questions or thoughts that are bothering them right now. All the citizens are happy because they have such a wonderful network that keeps them connected.</p>
  
-<p>The main goal of the Mayor is to control the city's happiness. The city's happiness is a sum of all citizens' happiness. And the happiness of each citizen is equal to the number of citizens (always including oneself) that one can send emails to.</p>
+<p style="text-align: justify;">The main goal of the Mayor is to control the city's happiness. The city's happiness is a sum of all citizens' happiness. And the happiness of each citizen is equal to the number of citizens (always including oneself) that one can send emails to.</p>
  
-<p>Because the city is growing, the citizens have decided that the Mayor needs an assistant to focus on the node protection.</p>
- 
-<p>Your mission is to figure out what will be the first nodes to investigate and protect for the new assistant. Remember, you should choose the most important node in the network. If several nodes have the maximal importance, find all of them</p>
+<p style="text-align: justify;">In the mission you need to find the most important district(s) in the city network from the point of letter exchanging. If several districts have the maximal importance, find all of them.</p>
+
+<p style="text-align: justify;">So, how to find this district? Let's look at the example below. You are given a city network of four districts: <b>"A", "B", "C", "D"</b>, which are connected by postal service in such a way: <b> "A" with "B", "B" with "C", "C" with "D"</b> and have respective number of users.</p>
+
+<p style="text-align: justify;">To evaluate the importance of a district, you need to calculate the total happiness of the city without this district - the smaller the happiness become, the more important this district is.</p>
+<ul>
+    <li>If a district is considered as excluded from the city network, its users may send letters only to themselves (for example, 10 users send to themselves -> 10 letters -> happiness of the district == 10).</li>
+    <li>If a district is not excluded, but has no connections with other districts, its users may send letters to anyone inside the district, including themselves (10 uses send to 10 -> 100 letters -> happiness == 100).</li>
+    <li>And finally, users of connected districts of course may sent letters to anyone inside this particular connected network (10 + 20 users send to 10 + 20 -> 30*30 letters -> connected network happiness == 900).</li>
+</ul>
+<p style="text-align: justify;">The total happiness of the city in each case (with every single district excluded one by one) is a sum of happiness of networks after excluding.</p>
+    
+     
 
 
 <div class="for_info_only" style="text-align: center">
@@ -18,17 +27,17 @@
 
 
 <p>
-    <strong>Input: </strong> Two arguments: the network structure (as a list of connections between the nodes), users on each node (as dict where keys are the node-names and values are the amounts of users).
+    <strong>Input:</strong> Two arguments: the network structure (as <span translate="repeat">{% if is_js %}array{% else %}list{% endif %}</span> of connections ({% if is_js %}array{% else %}list{% endif %} of strings <span translate="no">(str{% if is_js %}ing{% endif %})</span>) between the districts), users on each district (as dictionary <span translate="no">{% if is_js %}(object){% else %}(dict){% endif %}</span> where keys are the district names as string <span translate="no">(str{% if is_js %}ing{% endif %})</span> and values are the amounts of users as integer <span translate="no">{% if is_js %}(number){% else %}(int){% endif %}</span>).
 
 </p>
 
 <p>
-    <strong>Output: </strong> List of the most cruсial nodes.
+    <strong>Output:</strong> <span translate="repeat">{% if is_js %}Array{% else %}List{% endif %}</span> of the most crucial districts as strings <span translate="no">(str{% if is_js %}ing{% endif %})</span>.
 </p>
 
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Examples:</strong>
     </p>
 
 {% if interpreter.slug == "js-node" %}
